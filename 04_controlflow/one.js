@@ -32,9 +32,14 @@ const balance = 1000;
 
 const userLoggesIn = true;
 const debitcard = true;
+const loggedInFromGoogle = false;
+const loggedInFromEmail = true;
 
-if(userLoggesIn && debitcard){
+if(userLoggesIn && debitcard && 2==3){
     console.log("Allow to buy course");
 }
 
+if(loggedInFromGoogle || loggedInFromEmail){
+     console.log("User logged In");
+}
 // <, >, <=, >=, ==, !=, ===(also check type), !==
