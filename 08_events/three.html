@@ -15,16 +15,22 @@
 //         console.log(str, Date.now());
 //    }
 
-document.querySelector("#start").addEventListener("click", function () {
-        const start = function () {
-          console.log("Arpit", Date.now());
-        };
-        const toStop = setInterval(start, 1000, (click = start));
 
-        document.querySelector("#stop").addEventListener("click", function () {
-          clearInterval(toStop);
-        });
-      });   
+//  setInterval(task,2000);
+
+const task = function(){
+  console.log("Arpit", Date.now());
+}
+document.querySelector("#start").addEventListener('click',function(){
+ 
+  const toStop = setInterval(task,1000);
+  document.querySelector("#stop").addEventListener('click',function(){
+ clearTimeout(toStop);
+})
+})
+
+
+
 
 </script>
 </html>
